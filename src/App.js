@@ -1,26 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+const profileImage = require('./img/profile.jpg');
 
-function App() {
+const App = ()=>{
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <>
+        <Home />
+        <Misc />
+      </>
+  );
+
+}
+
+const Home =()=>{
+
+    return(
+      <header id ="home" className ="page home-section">
+          <div id ="top">
+            <div id ="resume">
+              <span> Download CV </span>
+            </div>
+          </div>
+          
+          <div id ="profile-container">
+              <img src = {profileImage} alt = "0" height = "150" width = "150"  />
+              <h1 id="profile-description" className ="type">
+                I'm Chomo Gwom, a Web Developer <br/> based in Johannesburg, South Africa.
+              </h1>
+          </div> 
       </header>
-    </div>
+    );
+}
+
+
+const Misc = () =>{
+  return (
+    <header id ="home" className ="page home-section">
+        <div id ="top">
+          <div id ="logo">
+            Chomo
+          </div>
+          <div id ="resume">
+            <span> Download CV </span>
+          </div>
+          
+        </div>
+      </header>
   );
 }
 
 export default App;
+
+
